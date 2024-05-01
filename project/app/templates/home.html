@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашняя страница:з</title>
+</head>
+<body>
+    <h1>Добро пожаловать на страницу стажировок ИСИТа</h1>
+    <p>Это домашняя страница нашего вебсайта.</p>
+
+    <!-- Ссылки на другие страницы -->
+    <ul>
+        <li><a href="{% url 'employer_page' %}">Страница работодателя</a></li>
+        <li><a href="{% url 'create_internship' %}">Создать стажировку</a></li>
+        <li><a href="{% url 'internship_search' %}">Поиск стажировок</a></li>
+    </ul>
+</body>
+</html>

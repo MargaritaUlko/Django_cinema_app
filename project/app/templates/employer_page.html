@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Страница работодателя</title>
+</head>
+<body>
+    <h1>Страница работодателя</h1>
+    <ul>
+    {% for company in companies %}
+        <li>{{ company.name }} - {{ company.address }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'create_internship' %}">Создать стажировку</a>
+</body>
+</html>

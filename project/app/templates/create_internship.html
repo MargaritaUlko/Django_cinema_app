@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Internship</title>
+</head>
+<body>
+    <h1>Создать стажировку</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="company">Company:</label><br>
+        <select id="company" name="company">
+            <!-- Поле для выбора компании -->
+            {% for company in companies %}
+            <option value="{{ company.id }}">{{ company.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="name">Название:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="direction">Направление:</label><br>
+        <input type="text" id="direction" name="direction"><br><br>
+
+        <label for="date">Дата:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="experience_required">Опыт работы:</label><br>
+        <input type="checkbox" id="experience_required" name="experience_required"><br><br>
+
+        <label for="education_required">Требуемое образование:</label><br>
+        <input type="text" id="education_required" name="education_required"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

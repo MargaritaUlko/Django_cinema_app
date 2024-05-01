@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Поиск стажировок</title>
+</head>
+<body>
+    <h1>Поиск стажировок</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="education">Образование:</label>
+        <input type="text" id="education" name="education">
+        <br>
+        <label for="experience">Опыт:</label>
+        <input type="radio" id="with_experience" name="experience" value="with_experience">
+        <label for="with_experience">С опытом</label>
+        <input type="radio" id="without_experience" name="experience" value="without_experience">
+        <label for="without_experience">Без опыта</label>
+        <br>
+        <label for="direction">Направление:</label>
+        <input type="text" id="direction" name="direction">
+        <br>
+        <button type="submit">Поиск</button>
+    </form>
+</body>
+</html>
